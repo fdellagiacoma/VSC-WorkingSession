@@ -1,0 +1,4 @@
+- write some tasks for staring VSC 
+- group them togehter
+- configure roup to run at start
+- configure error handling. f.e task already activated 
