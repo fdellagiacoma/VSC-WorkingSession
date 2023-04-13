@@ -1,0 +1,52 @@
+{
+  "inputs": [
+    {
+      "default": "",
+      "description": "Linux password",
+      "id": "linux_password",
+      "type": "promptString"
+    },
+  ],
+  "tasks": [
+    {
+      "command": "echo 'hello world'",
+      "label": "greetings",
+      "type": "shell",
+      "icon": {
+        "color": "terminal.ansiMagenta",
+        "id": "bell"
+      },
+    },
+    {
+      "command": "source env.sh",
+      "label": "source env variables",
+      "type": "shell",
+      "icon": {
+        "color": "terminal.ansiBlue",
+        "id": "debug-stackframe-focused"
+      },
+    },
+    {
+      "command": "sam validate -t template.yaml;  sam build --use-container --template template.yaml; pip install . --target .aws-sam/build/CostReportingFunction/; pip install . --target .aws-sam/build/CLONECostReportingFunction/; pip install . --target .aws-sam/build/MeteringFunction/; rm build/ cast_package.egg-info/ -r ",
+      "label": "Build",
+      "type": "shell"
+    },
+    {
+      "command": "sudo service docker start",
+      "label": "start docker",
+      "type": "shell",
+      "promptOnClose": true,
+      "revealProblems":true
+
+
+    },
+    {
+      "command": "sudo service postgresql start; sudo -u postgres psql",
+      "label": "start psql",
+      "type": "shell"
+    },
+  ],
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0"
+}

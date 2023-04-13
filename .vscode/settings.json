@@ -1,0 +1,133 @@
+{
+    // Editor settings
+    "editor.tabSize": 90,
+    "editor.rulers": [80, 120],
+    "editor.renderWhitespace": "trailing",
+    // "editor.suggestSelection": "first",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.flake8",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    // terminal
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    // Debug
+    "debug.onTaskErrors": "debugAnyway",
+    // Explorer settings
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.copyRelativePathSeparator": "/",
+    // Files settings
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "node_modules/**/*": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.associations": {
+        "*.pyd": "cython",
+        "*.pyx": "cython",
+        ".clang*": "yaml",
+        "*.gpj": "jsonc",
+        "*.gvw": "jsonc"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    // workbench
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.md": "vscode.markdown.preview.editor",
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    // Git settings
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    // Python settings
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": false,
+    "python.formatting.provider": "autopep8",
+    "python.languageServer": "Pylance",
+
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+            "source.fixAll": true
+        },
+    },
+    "flake8.args":[
+        "--max-line-length=120",
+        "--ignore=F403,F405,W503,W605,E266"],
+    // Jupyter Notebook
+    "jupyter.askForKernelRestart": false,
+    "jupyter.useDefaultConfigForJupyter": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "notebook.compactView": false,
+    "notebook.diff.ignoreMetadata": true,
+    "notebook.diff.ignoreOutputs": true,
+    // markdown
+    "markdown.validate.enabled": true,
+    "[markdown]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    // Different languages
+    "[yaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+
+    },
+    "[json]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.formatOnSave": false
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 120
+    },
+    // BetterComments
+    "better-comments.tags": [
+        {
+            "tag": "XXX",
+            "color": "#F8C471"
+        },
+        {
+            "tag": "WARN",
+            "color": "#FF6961"
+        },
+        {
+            "tag": "NOTE",
+            "color": "#3498DB"
+        },
+        {
+            "tag": "TODO",
+            "color": "#77C3EC"
+        }
+    ],
+    // other extensions
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.indexing": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticMode": "workspace",
+    "yaml.schemaStore.url": "https://json.schemastore.org/pubspec.json",
+
+
+}
