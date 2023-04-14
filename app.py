@@ -1,31 +1,38 @@
-import math
-import sys
+import argparse
 
 
-def example1():
-    # This is a long comment. This should be wrapped to fit within 72 characters.
-    some_tuple = (1, 2, 3, 'a')
-    some_variable = {'long': 'Long code lines should be wrapped within 79 characters.',
-                     'other': [math.pi, 100, 200, 300, 9876543210, 'This is a long string that goes on'],
-                     'more': {'inner': 'This whole logical line should be wrapped.', some_tuple: [1,
-                                                                                                  20, 300, 40000, 500000000, 60000000000000000]}}
-    return (some_tuple, some_variable)
+# Program to display the Fibonacci sequence up to n-th term
+def fibonacci(nterms):
+    # first two terms
+    n1, n2 = 0, 1
+    count = 0
+
+    # check if the number of terms is valid
+    if nterms <= 0:
+        print("Please enter a positive integer")
+    # if there is only one term, return n1
+    elif nterms == 1:
+        print("Fibonacci sequence upto", nterms, ":")
+        print(n1)
+    # generate fibonacci sequence
+    else:
+        print("Fibonacci sequence:")
+        while count < nterms:
+            print(n1)
+            nth = n1 + n2
+            # update values
+            n1 = n2
+            n2 = nth
+            count += 1
 
 
-def example2(): return {'has_key() is deprecated': True}.has_key(
-    {'f': 2}.has_key(''))
-
-
-class Example3(object):
-    def __init__(self, bar):
-        # Comments should have a space after the hash.
-        if bar:
-            bar += 1
-            bar = bar * bar
-            return bar
-        else:
-            some_string = """
-                       Indentation in multiline strings should not be touched.
-Only actual code should be reindented.
-"""
-            return (sys.path, some_string)
+if __name__ == '__main__':
+    # provide CLI arguments
+    #  to function
+    parser = argparse.ArgumentParser(description='A test program.')
+    parser.add_argument(
+        "--terms", help="for how many terms should we calculate ?")
+    args = parser.parse_args()
+    # convert arg to int and start functions
+    fibonacci(int(args.terms))
+    print('here your fibonacci stuff')

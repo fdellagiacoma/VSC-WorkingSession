@@ -94,7 +94,8 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
-        "editor.formatOnSave": false
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[plaintext]": {
         "editor.wordWrap": "wordWrapColumn",
