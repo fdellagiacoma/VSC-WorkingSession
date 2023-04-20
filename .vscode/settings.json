@@ -101,25 +101,6 @@
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 120
     },
-    // BetterComments
-    "better-comments.tags": [
-        {
-            "tag": "XXX",
-            "color": "#F8C471"
-        },
-        {
-            "tag": "WARN",
-            "color": "#FF6961"
-        },
-        {
-            "tag": "NOTE",
-            "color": "#3498DB"
-        },
-        {
-            "tag": "TODO",
-            "color": "#77C3EC"
-        }
-    ],
     // other extensions
     "jupyter.interactiveWindow.creationMode": "perFile",
     "python.analysis.typeCheckingMode": "off",
@@ -129,6 +110,5 @@
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
     "yaml.schemaStore.url": "https://json.schemastore.org/pubspec.json",
-
 
 }
