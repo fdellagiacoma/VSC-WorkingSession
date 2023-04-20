@@ -1,8 +1,5 @@
 {
-    // Editor settings
-    "editor.tabSize": 90,
-    "editor.rulers": [80, 120],
-    "editor.renderWhitespace": "trailing",
+
     // "editor.suggestSelection": "first",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.flake8",
@@ -25,29 +22,29 @@
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
-    },
+        "**/.factorypath": true},
+
     "files.associations": {
         "*.pyd": "cython",
         "*.pyx": "cython",
         ".clang*": "yaml",
         "*.gpj": "jsonc",
-        "*.gvw": "jsonc"
-    },
+        "*.gvw": "jsonc"},
+
     "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     // workbench
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
-        "*.md": "vscode.markdown.preview.editor",
-    },
+        "*.md": "vscode.markdown.preview.editor",},
+
     "workbench.editor.untitled.hint": "hidden",
     // Git settings
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+
     // Python settings
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
