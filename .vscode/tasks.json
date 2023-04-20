@@ -32,7 +32,10 @@
           "presentation": {
               "close": false,
               "panel": "shared"
-          }
+          },
+          "options": {"cwd": "${workspaceFolder}"},
+          "isBackground": true
+
       },
       {
           "label": "start working folder",

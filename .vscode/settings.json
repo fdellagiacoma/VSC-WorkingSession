@@ -8,6 +8,12 @@
     // terminal
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.profiles.linux": {
+        "python3-repl": {
+            "path": "python3",
+            "args": ["-q"]
+        }
+    },
     // Debug
     "debug.onTaskErrors": "debugAnyway",
     // Explorer settings
@@ -107,5 +113,10 @@
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
     "yaml.schemaStore.url": "https://json.schemastore.org/pubspec.json",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
 
 }
