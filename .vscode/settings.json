@@ -87,7 +87,7 @@
 
     },
     "[json]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
