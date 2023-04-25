@@ -37,7 +37,7 @@
         "*.gpj": "jsonc",
         "*.gvw": "jsonc"},
 
-    "files.insertFinalNewline": true,
+    "files.insertFinalNewline": false,
     "files.trimTrailingWhitespace": true,
     // workbench
     "workbench.startupEditor": "none",

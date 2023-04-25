@@ -35,4 +35,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     # convert arg to int and start functions
     fibonacci(int(args.terms))
-    print('here your fibonacci stuff')
+    print('here your fibonacci numbers')

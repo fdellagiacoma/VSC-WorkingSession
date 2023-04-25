@@ -19,6 +19,14 @@
           }
       },
       {
+        "command": "echo ${input:some_prompt}",
+        "label": "greetings",
+        "type": "shell",
+        "icon": {
+          "color": "terminal.ansiMagenta",
+          "id": "bell"
+        }},
+      {
           "command": "env.bat",
           "label": "source env variables",
           "type": "shell",
@@ -41,7 +49,7 @@
           "label": "start working folder",
           "dependsOn": [
               "greetings",
-              "source env variables"
+              "systeminfo"
           ],
           "runOptions": {
               "runOn": "folderOpen"
