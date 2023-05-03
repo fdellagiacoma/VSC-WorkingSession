@@ -1,7 +1,13 @@
 import argparse
+import pandas as pd
 
+import os
+
+import pandas as pd
 
 # Program to display the Fibonacci sequence up to n-th term
+
+
 def fibonacci(nterms):
     # first two terms
     n1, n2 = 0, 1

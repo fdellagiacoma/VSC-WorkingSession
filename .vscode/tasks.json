@@ -19,8 +19,8 @@
           }
       },
       {
-        "command": "echo ${input:some_prompt}",
-        "label": "greetings",
+        "command": "Hello ${input:some_prompt}",
+        "label": "greetings with name",
         "type": "shell",
         "icon": {
           "color": "terminal.ansiMagenta",
@@ -69,16 +69,9 @@
           "problemMatcher": []
       },
       {
-          "command": "systeminfo",
-          "label": "show system info",
-          "type": "shell",
-          "promptOnClose": true
-      },
-      {
           "command": "python app.py --terms ${input:some_prompt} ",
           "label": "fibonacci",
           "type": "shell",
-          "promptOnClose": true,
           "presentation": {
               "echo": false,
               "reveal": "always",

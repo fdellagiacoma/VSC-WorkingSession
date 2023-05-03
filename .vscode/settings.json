@@ -8,12 +8,6 @@
     // terminal
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "terminal.integrated.profiles.linux": {
-        "python3-repl": {
-            "path": "python3",
-            "args": ["-q"]
-        }
-    },
     // Debug
     "debug.onTaskErrors": "debugAnyway",
     // Explorer settings
@@ -29,13 +23,6 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true},
-
-    "files.associations": {
-        "*.pyd": "cython",
-        "*.pyx": "cython",
-        ".clang*": "yaml",
-        "*.gpj": "jsonc",
-        "*.gvw": "jsonc"},
 
     "files.insertFinalNewline": false,
     "files.trimTrailingWhitespace": true,
@@ -65,7 +52,8 @@
         "editor.defaultFormatter": "ms-python.python",
         "editor.codeActionsOnSave": {
             "source.organizeImports": true,
-            "source.fixAll": true
+            "source.sortImports": true,
+            "source.fixAll": true,
         },
     },
     "flake8.args":[
