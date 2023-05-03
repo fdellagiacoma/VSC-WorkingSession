@@ -1,8 +1,5 @@
 {
-    // Editor settings
-    "editor.tabSize": 90,
-    "editor.rulers": [80, 120],
-    "editor.renderWhitespace": "trailing",
+
     // "editor.suggestSelection": "first",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.flake8",
@@ -11,6 +8,12 @@
     // terminal
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.profiles.linux": {
+        "python3-repl": {
+            "path": "python3",
+            "args": ["-q"]
+        }
+    },
     // Debug
     "debug.onTaskErrors": "debugAnyway",
     // Explorer settings
@@ -25,29 +28,29 @@
         "**/.classpath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
-    },
+        "**/.factorypath": true},
+
     "files.associations": {
         "*.pyd": "cython",
         "*.pyx": "cython",
         ".clang*": "yaml",
         "*.gpj": "jsonc",
-        "*.gvw": "jsonc"
-    },
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
+        "*.gvw": "jsonc"},
+
+    "files.insertFinalNewline": false,
     "files.trimTrailingWhitespace": true,
     // workbench
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
-        "*.md": "vscode.markdown.preview.editor",
-    },
+        "*.md": "vscode.markdown.preview.editor",},
+
     "workbench.editor.untitled.hint": "hidden",
     // Git settings
     "git.enableSmartCommit": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+
     // Python settings
     "python.linting.enabled": true,
     "python.linting.lintOnSave": true,
@@ -90,35 +93,17 @@
 
     },
     "[json]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false,
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
-        "editor.formatOnSave": false
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[plaintext]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 120
     },
-    // BetterComments
-    "better-comments.tags": [
-        {
-            "tag": "XXX",
-            "color": "#F8C471"
-        },
-        {
-            "tag": "WARN",
-            "color": "#FF6961"
-        },
-        {
-            "tag": "NOTE",
-            "color": "#3498DB"
-        },
-        {
-            "tag": "TODO",
-            "color": "#77C3EC"
-        }
-    ],
     // other extensions
     "jupyter.interactiveWindow.creationMode": "perFile",
     "python.analysis.typeCheckingMode": "off",
@@ -128,6 +113,10 @@
     "python.analysis.completeFunctionParens": true,
     "python.analysis.diagnosticMode": "workspace",
     "yaml.schemaStore.url": "https://json.schemastore.org/pubspec.json",
-
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
 
 }

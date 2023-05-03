@@ -1,33 +1,22 @@
 {
-    "inputs": [
-        {
-            "default": "",
-            "description": "Some prompt",
-            "id": "some_prompt",
-            "type": "promptString",
-
-        },
-    ],
-    "tasks": [
+  "inputs": [
       {
-        "command": "echo 'hello world'",
-        "label": "greetings",
-        "type": "shell",
-        "icon": {
-          "color": "terminal.ansiMagenta",
-          "id": "bell"
-        },
-        "presentation": {
-          "echo": true,
-          "reveal": "always",
-          "focus": false,
-          "panel": "shared",
-          "showReuseMessage": true,
-          "clear": false
-        },
-        "runOptions": {
-          "runOn": "folderOpen"
-        }
+          "default": "",
+          "description": "Some prompt",
+          "id": "some_prompt",
+          "type": "promptString",
+
+      },
+  ],
+  "tasks": [
+      {
+          "command": "echo hello world",
+          "label": "greetings",
+          "type": "shell",
+          "icon": {
+              "color": "terminal.ansiMagenta",
+              "id": "bell"
+          }
       },
       {
         "command": "echo ${input:some_prompt}",
@@ -38,47 +27,69 @@
           "id": "bell"
         }},
       {
-        "command": "source env.sh",
-        "label": "source env variables",
-        "type": "shell",
-        "icon": {
-          "color": "terminal.ansiBlue",
-          "id": "debug-stackframe-focused"
-        },
-        "runOptions": {
-          "runOn": "folderOpen"
-        },
-        "presentation": {
-          "close": false,
-        }
+          "command": "env.bat",
+          "label": "source env variables",
+          "type": "shell",
+          "icon": {
+              "color": "terminal.ansiBlue",
+              "id": "debug-stackframe-focused"
+          },
+          "windows":{"command":"env.bat"},
+          "linux":{"command":"source env.sh"},
+
+          "presentation": {
+              "close": false,
+              "panel": "shared"
+          },
+          "options": {"cwd": "${workspaceFolder}"},
+          "isBackground": true
+
       },
       {
-        "label": "autopep8 current file",
-        "type": "process",
-        "command": "${config:python.formatting.autopep8Path}",
-        "args": [
-          "--aggressive",
-          "${file}"
-        ],
+          "label": "start working folder",
+          "dependsOn": [
+              "greetings",
+              "systeminfo"
+          ],
+          "dependsOrder": "sequence",
+          "runOptions": {
+              "runOn": "folderOpen"
+          },
+          "problemMatcher": []
       },
       {
-        "command": "sam validate -t template.yaml;  sam build --use-container --template template.yaml; pip install . --target .aws-sam/build/CostReportingFunction/; pip install . --target .aws-sam/build/CLONECostReportingFunction/; pip install . --target .aws-sam/build/MeteringFunction/; rm build/ cast_package.egg-info/ -r ",
-        "label": "Build",
-        "type": "shell"
+          "label": "autopep8 current file",
+          "type": "shell",
+          "command": "${config:python.formatting.autopep8Path} ",
+          "args": [
+              "--aggressive",
+              "--in-place",
+              "${file}"
+          ],
+          "problemMatcher": []
       },
       {
-        "command": "sudo service docker start",
-        "label": "start docker",
-        "type": "shell",
-        "promptOnClose": true
+          "command": "systeminfo",
+          "label": "show system info",
+          "type": "shell",
+          "promptOnClose": true
       },
       {
-        "command": "sudo service postgresql start; sudo -u postgres psql",
-        "label": "start psql",
-        "type": "shell"
+          "command": "python app.py --terms ${input:some_prompt} ",
+          "label": "fibonacci",
+          "type": "shell",
+          "promptOnClose": true,
+          "presentation": {
+              "echo": false,
+              "reveal": "always",
+              "focus": false,
+              "panel": "shared",
+              "showReuseMessage": true,
+              "clear": true
+          }
       }
-    ],
-    // See https: // go.microsoft.com/fwlink /?LinkId = 733558
-    // for the documentation about the tasks.json format
-``    "version": "2.0.0"
+  ],
+  // See https: // go.microsoft.com / fwlink /?LinkId = 733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0"
 }
