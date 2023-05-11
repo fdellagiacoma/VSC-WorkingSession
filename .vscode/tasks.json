@@ -49,7 +49,6 @@
           "label": "start working folder",
           "dependsOn": [
               "greetings",
-              "systeminfo"
           ],
           "dependsOrder": "sequence",
           "runOptions": {
